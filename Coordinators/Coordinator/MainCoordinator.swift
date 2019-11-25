@@ -13,7 +13,7 @@ import UIKit
 //delete "Main" from Main interace setting and add this to appdelegate:
 //  var coordinator: MainCoordinator?
 
-class MainCoordinator: Coordinator {
+class MainCoordinator: NSObject, Coordinator, UINavigationControllerDelegate {
     var childCoordinators = [Coordinator]()
     var navigationController: UINavigationController //property not set
     
@@ -22,6 +22,7 @@ class MainCoordinator: Coordinator {
     }
     
     func start() {
+        navigationController.delegate = self
         let vc = ViewController.instantiate()
         vc.coordinator = self
         navigationController.pushViewController(vc, animated: false)
@@ -53,6 +54,20 @@ class MainCoordinator: Coordinator {
                 childCoordinators.remove(at: index)
                 break
             }
+        }
+    }
+    
+    func navigationController(_ navigationController: UINavigationController, didShow viewController: UIViewController, animated: Bool) {
+        guard let fromViewController = navigationController.transitionCoordinator?.viewController(forKey: .from) else {
+            return
+        }
+        //if already contains, pushing on top of vc
+        if navigationController.viewControllers.contains(fromViewController) {
+            return
+        }
+        // if still here pop vc
+        if let buyViewController = fromViewController as? BuyViewController {
+            childDidFinish(buyViewController.coordinator)
         }
     }
     
