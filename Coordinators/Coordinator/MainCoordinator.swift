@@ -28,15 +28,32 @@ class MainCoordinator: Coordinator {
     }
     
     func buySubscription() {
-        let vc = BuyViewController.instantiate()
-        vc.coordinator = self
-        navigationController.pushViewController(vc, animated: true)
+        //below was moved into the BuyCoordinator:
+//        let vc = BuyViewController.instantiate()
+//        vc.coordinator = self
+//        navigationController.pushViewController(vc, animated: true)
+        //create instance of child and tell it to take over controll:
+        let child = BuyCoordinator(navigationController: navigationController)
+        child.parentCoordinator = self
+        childCoordinators.append(child)
+        child.start()
+        
+        //problem in needing to know when to dismiss child? establish link from buycoordinator to the main coordinator: weak var parentCoordinator: MainCoordinator?... and link to self above.. 
     }
     
     func createAccount() {
         let vc = CreateAccountViewcontroller.instantiate()
         vc.coordinator = self
         navigationController.pushViewController(vc, animated: true)
+    }
+    
+    func childDidFinish(_ child: Coordinator?) {
+        for (index, coordinator) in childCoordinators.enumerated() {
+            if coordinator === child {
+                childCoordinators.remove(at: index)
+                break
+            }
+        }
     }
     
 }

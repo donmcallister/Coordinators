@@ -17,6 +17,7 @@
 		94885B81238C0C890049A373 /* MainCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94885B80238C0C890049A373 /* MainCoordinator.swift */; };
 		94885B83238C0EF00049A373 /* BuyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94885B82238C0EF00049A373 /* BuyViewController.swift */; };
 		94885B85238C0EFC0049A373 /* CreateAccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94885B84238C0EFC0049A373 /* CreateAccountViewController.swift */; };
+		94885B8A238C1A850049A373 /* BuyCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94885B89238C1A850049A373 /* BuyCoordinator.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +33,7 @@
 		94885B80238C0C890049A373 /* MainCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainCoordinator.swift; sourceTree = "<group>"; };
 		94885B82238C0EF00049A373 /* BuyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BuyViewController.swift; sourceTree = "<group>"; };
 		94885B84238C0EFC0049A373 /* CreateAccountViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateAccountViewController.swift; sourceTree = "<group>"; };
+		94885B89238C1A850049A373 /* BuyCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BuyCoordinator.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -89,6 +91,7 @@
 			isa = PBXGroup;
 			children = (
 				94885B80238C0C890049A373 /* MainCoordinator.swift */,
+				94885B89238C1A850049A373 /* BuyCoordinator.swift */,
 			);
 			path = Coordinator;
 			sourceTree = "<group>";
@@ -177,6 +180,7 @@
 				94885B85238C0EFC0049A373 /* CreateAccountViewController.swift in Sources */,
 				94885B6D238C0ABD0049A373 /* ViewController.swift in Sources */,
 				94885B6B238C0ABD0049A373 /* AppDelegate.swift in Sources */,
+				94885B8A238C1A850049A373 /* BuyCoordinator.swift in Sources */,
 				94885B7D238C0AE10049A373 /* Coordinator.swift in Sources */,
 				94885B81238C0C890049A373 /* MainCoordinator.swift in Sources */,
 				94885B7F238C0B480049A373 /* Storyboarded.swift in Sources */,
