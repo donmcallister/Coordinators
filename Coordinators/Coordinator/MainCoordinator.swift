@@ -28,16 +28,17 @@ class MainCoordinator: NSObject, Coordinator, UINavigationControllerDelegate {
         navigationController.pushViewController(vc, animated: false)
     }
     
-    func buySubscription() {
+    func buySubscription(to productType: Int) {
         //below was moved into the BuyCoordinator:
-//        let vc = BuyViewController.instantiate()
-//        vc.coordinator = self
-//        navigationController.pushViewController(vc, animated: true)
+        let vc = BuyViewController.instantiate()
+        vc.selectedProduct = productType
+        vc.coordinator = self
+        navigationController.pushViewController(vc, animated: true)
         //create instance of child and tell it to take over controll:
-        let child = BuyCoordinator(navigationController: navigationController)
-        child.parentCoordinator = self
-        childCoordinators.append(child)
-        child.start()
+//        let child = BuyCoordinator(navigationController: navigationController)
+//        child.parentCoordinator = self
+//        childCoordinators.append(child)
+//        child.start()
         
         //problem in needing to know when to dismiss child? establish link from buycoordinator to the main coordinator: weak var parentCoordinator: MainCoordinator?... and link to self above.. 
     }

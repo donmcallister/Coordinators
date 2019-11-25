@@ -9,7 +9,9 @@
 import UIKit
 
 class BuyViewController: UIViewController, Storyboarded {
-    weak var coordinator: BuyCoordinator? //was MainCoordinator?
+    weak var coordinator: MainCoordinator? //BuyCoordinator? //was MainCoordinator?
+    
+    var selectedProduct = 0 //which subscription product was selected? provide this when other VC created in buySubscription()
     
     override func viewDidLoad() {
         super.viewDidLoad()

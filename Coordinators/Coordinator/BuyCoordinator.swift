@@ -10,7 +10,8 @@ import UIKit
 
 class BuyCoordinator: Coordinator {
 
-    weak var parentCoordinator: MainCoordinator?
+ //   weak var parentCoordinator: MainCoordinator?
+    weak var coordinator: MainCoordinator?
     
     var childCoordinators = [Coordinator]()
     var navigationController: UINavigationController
@@ -21,7 +22,7 @@ class BuyCoordinator: Coordinator {
     
     func start() {
         let vc = BuyViewController.instantiate()
-        vc.coordinator = self //doesn't work until change property to by a BuyCoordinator in the BuyViewController class. 
+     //   vc.coordinator = self //doesn't work until change property to by a BuyCoordinator in the BuyViewController class. 
         navigationController.pushViewController(vc, animated: true)
     }
     
