@@ -8,7 +8,7 @@
 
 import UIKit
 
-
+//whenever you add a view controller to your storyboard, make sure you set its storyboard identifier to whatever class name you gave it.
 protocol Storyboarded {
     static func instantiate() -> Self
 }

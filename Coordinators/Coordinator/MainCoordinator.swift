@@ -15,10 +15,10 @@ import UIKit
 
 class MainCoordinator: Coordinator {
     var childCoordinators = [Coordinator]()
-    var navigationController: UINavigationController
+    var navigationController: UINavigationController //property not set
     
     init(navigationController: UINavigationController) {
-        self.navigationController = navigationController
+        self.navigationController = navigationController //property set
     }
     
     func start() {

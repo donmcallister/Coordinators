@@ -65,18 +65,42 @@
 			isa = PBXGroup;
 			children = (
 				94885B6A238C0ABD0049A373 /* AppDelegate.swift */,
-				94885B82238C0EF00049A373 /* BuyViewController.swift */,
-				94885B84238C0EFC0049A373 /* CreateAccountViewController.swift */,
-				94885B6C238C0ABD0049A373 /* ViewController.swift */,
 				94885B6E238C0ABD0049A373 /* Main.storyboard */,
-				94885B80238C0C890049A373 /* MainCoordinator.swift */,
+				94885B86238C13A70049A373 /* Protocols */,
+				94885B88238C13D20049A373 /* Controllers */,
+				94885B87238C13C30049A373 /* Coordinator */,
 				94885B71238C0ABE0049A373 /* Assets.xcassets */,
 				94885B73238C0ABE0049A373 /* LaunchScreen.storyboard */,
 				94885B76238C0ABE0049A373 /* Info.plist */,
+			);
+			path = Coordinators;
+			sourceTree = "<group>";
+		};
+		94885B86238C13A70049A373 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
 				94885B7C238C0AE10049A373 /* Coordinator.swift */,
 				94885B7E238C0B480049A373 /* Storyboarded.swift */,
 			);
-			path = Coordinators;
+			path = Protocols;
+			sourceTree = "<group>";
+		};
+		94885B87238C13C30049A373 /* Coordinator */ = {
+			isa = PBXGroup;
+			children = (
+				94885B80238C0C890049A373 /* MainCoordinator.swift */,
+			);
+			path = Coordinator;
+			sourceTree = "<group>";
+		};
+		94885B88238C13D20049A373 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				94885B6C238C0ABD0049A373 /* ViewController.swift */,
+				94885B82238C0EF00049A373 /* BuyViewController.swift */,
+				94885B84238C0EFC0049A373 /* CreateAccountViewController.swift */,
+			);
+			path = Controllers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

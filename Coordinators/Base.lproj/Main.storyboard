@@ -41,6 +41,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="90" y="19"/>
         </scene>
         <!--Buy View Controller-->
         <scene sceneID="9cr-4w-qSc">
@@ -64,7 +65,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="OF5-ag-LOG" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="745" y="19"/>
+            <point key="canvasLocation" x="775" y="19"/>
         </scene>
         <!--Create Account Viewcontroller-->
         <scene sceneID="F8Y-27-IoK">

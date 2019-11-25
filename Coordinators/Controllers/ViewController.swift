@@ -10,6 +10,7 @@ import UIKit
 
 class ViewController: UIViewController, Storyboarded {
     
+//  all our view controllers need a way to talk to their coordinator..for larger apps you’ll want to use protocols here, but this is a fairly small app so we can refer to our MainCoordinator class directly. add this property to all three of your view controllers:
     weak var coordinator: MainCoordinator?
 
     override func viewDidLoad() {
